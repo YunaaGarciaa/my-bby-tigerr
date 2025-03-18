@@ -1,0 +1,149 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #87CEEB, #E0F6FF);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.scene {
+    animation: fadeIn 1s ease-in;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+#tiger-area {
+    position: relative;
+    height: 300px;
+    margin: 20px 0;
+}
+
+#tiger-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#tiger-img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#tiger-img:hover {
+    transform: scale(1.1);
+}
+
+.speech-bubble {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    font-size: 14px;
+    max-width: 200px;
+}
+
+#pet-stats {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    width: 350px;
+}
+
+.stat-bar {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.stat-bar label {
+    width: 80px;
+    font-weight: bold;
+}
+
+.bar {
+    width: 200px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.fill {
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+#hunger-bar { background: #FF6347; }
+#happiness-bar { background: #FFD700; }
+#energy-bar { background: #1E90FF; }
+
+#actions {
+    margin: 20px 0;
+}
+
+.action-btn {
+    padding: 12px 25px;
+    margin: 5px;
+    font-size: 16px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.action-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+#customization-panel {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    width: 400px;
+}
+
+#room {
+    margin-top: 20px;
+}
+
+#room-bg {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: opacity 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
