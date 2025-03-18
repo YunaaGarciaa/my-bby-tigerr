@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tigre Blanco Virtual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Introducción narrativa -->
+        <div id="intro-scene" class="scene">
+            <h1>¡Bienvenido al Zoológico!</h1>
+            <p>Un tigre blanco nació aquí, pero su madre enfermó. Ahora tú, trabajador del zoológico, lo cuidarás.</p>
+            <button onclick="startGame()">¡Adoptar Tigre!</button>
+        </div>
+
+        <!-- Juego principal -->
+        <div id="game-scene" class="scene hidden">
+            <h1 id="tiger-title">Mi Tigre Blanco Virtual</h1>
+            
+            <!-- Área del tigre -->
+            <div id="tiger-area">
+                <div id="tiger-container">
+                    <img id="tiger-img" src="assets/tripo_convert_75a883fb-a5ac-4787-a3d7-c59c18696ffc" alt="Tigre Blanco">
+                    <div id="tiger-speech" class="speech-bubble hidden"></div>
+                </div>
+            </div>
+
+            <!-- Estadísticas -->
+            <div id="pet-stats">
+                <div class="stat-bar">
+                    <label>Hambre:</label>
+                    <div class="bar"><div id="hunger-bar" class="fill"></div></div>
+                    <span id="hunger-value">100</span>
+                </div>
+                <div class="stat-bar">
+                    <label>Felicidad:</label>
+                    <div class="bar"><div id="happiness-bar" class="fill"></div></div>
+                    <span id="happiness-value">100</span>
+                </div>
+                <div class="stat-bar">
+                    <label>Energía:</label>
+                    <div class="bar"><div id="energy-bar" class="fill"></div></div>
+                    <span id="energy-value">100</span>
+                </div>
+                <p>Nivel: <span id="level">1</span></p>
+                <p>Personalidad: <span id="personality"></span></p>
+            </div>
+
+            <!-- Acciones -->
+            <div id="actions">
+                <button onclick="feedTiger()" class="action-btn">Alimentar</button>
+                <button onclick="playWithTiger()" class="action-btn">Jugar</button>
+                <button onclick="restTiger()" class="action-btn">Descansar</button>
+                <button onclick="changeRoom()" class="action-btn">Cambiar Habitación</button>
+                <button onclick="showCustomization()" class="action-btn">Personalizar</button>
+            </div>
+
+            <!-- Personalización (oculta por defecto) -->
+            <div id="customization-panel" class="hidden">
+                <h2>Personaliza tu Tigre</h2>
+                <input type="text" id="tiger-name" placeholder="Nombra a tu tigre">
+                <button onclick="setTigerName()">Guardar Nombre</button>
+                <div id="animal-options" class="hidden">
+                    <h3>Elije un nuevo animal (Nivel 2):</h3>
+                    <button onclick="changeAnimal('Tigre Blanco')">Tigre Blanco</button>
+                    <button onclick="changeAnimal('León')">León</button>
+                    <button onclick="changeAnimal('Pantera')">Pantera</button>
+                </div>
+            </div>
+
+            <!-- Habitación -->
+            <div id="room">
+                <img id="room-bg" src="assets/piclumen-1742244520464.png" alt="Salón">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
